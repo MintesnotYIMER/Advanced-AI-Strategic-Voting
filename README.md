@@ -20,7 +20,7 @@ The repository is structured to reflect the four main phases of our methodology:
 * 📄 **[election.gaml](Simulation/election.gaml)**: The GAMA platform simulation code. It simulates a 60-day election cycle where agents react to daily polls based on their Nash equilibrium calculations. The model tracks social welfare, the variance of the candidate scores, and the number of strategic opinion changes per day.
 
 ### Part 3: Deep Learning Surrogate Model
-* 📄 **[Part3.ipynb](Surrogate_Model/Surrogate_model.ipynb)**: A Jupyter Notebook containing the data preprocessing and the TensorFlow/Keras implementation of a Bidirectional Long Short-Term Memory (BiLSTM) neural network. It trains on the GAMA time-series data to rapidly predict daily vote changes.
+* 📄 **[Surrogate_model.ipynb](Surrogate_Model/Surrogate_model.ipynb)**: A Jupyter Notebook containing the data preprocessing and the TensorFlow/Keras implementation of a Bidirectional Long Short-Term Memory (BiLSTM) neural network. It trains on the GAMA time-series data to rapidly predict daily vote changes.
 * 📊 **[surrogate_training_data_FINAL.csv](Dataset/surrogate_training_data_FINAL.csv)**: The core dataset exported from GAMA used to train the surrogate model, stored in the `Dataset` folder.
 
 ### Part 4: Analysis & Reporting
@@ -34,17 +34,17 @@ The repository is structured to reflect the four main phases of our methodology:
 ### 1. GAMA Simulation: Multi-Agent Dynamics
 The Agent-Based Model captures the collapse of third-party candidates as voters strategically shift their votes. The plots below show how the distribution of agent types (Stubborn vs. Strategic) affects score variance, social welfare, and daily vote changes over the 60-day election cycle.
 
-![GAMA Scenarios](Images/plot1_scenarios.jpg)
+![GAMA Scenarios](images/plot1_scenarios.jpg)
 
 ### 2. BiLSTM Surrogate Model Accuracy
 To bypass the computational bottleneck of simulating thousands of interacting agents, we trained a BiLSTM neural network. As shown below, the surrogate model successfully learned the underlying game-theoretic dynamics, accurately predicting the daily volume of strategic vote changes on unseen test data.
 
-![Surrogate Predictions](Images/predictions_test_final.png)
+![Surrogate Predictions](images/predictions_test_final.png)
 
 ### 3. Scaling to 100,000 Voters
 The ultimate goal of the surrogate model is scalability. Running the GAMA simulation for massive populations is computationally prohibitive. Using our trained neural network, we successfully extrapolated the election dynamics to a national scale of 100,000 voters, running thousands of times faster than traditional ABM.
 
-![100k Extrapolation](Images/extrapolation_100k.png)
+![100k Extrapolation](images/extrapolation_100k.png)
 
 ---
 
