@@ -34,7 +34,7 @@ The repository is structured to reflect the four main phases of our methodology:
 ### 1. GAMA Simulation: Multi-Agent Dynamics
 The Agent-Based Model captures the collapse of third-party candidates as voters strategically shift their votes. The plots below show how the distribution of agent types (Stubborn vs. Strategic) affects score variance, social welfare, and daily vote changes over the 60-day election cycle.
 
-![GAMA Scenarios](images/plot1_scenarios.jpg)
+![GAMA Scenarios](images/plot1_scenarios.png)
 
 ### 2. BiLSTM Surrogate Model Accuracy
 To bypass the computational bottleneck of simulating thousands of interacting agents, we trained a BiLSTM neural network. As shown below, the surrogate model successfully learned the underlying game-theoretic dynamics, accurately predicting the daily volume of strategic vote changes on unseen test data.
