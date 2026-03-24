@@ -14,7 +14,7 @@ Our goal is to model how voters rationally abandon their sincere preferences for
 The repository is structured to reflect the four main phases of our methodology:
 
 ### Part 1: Data Generation
-* 📄 **[part1_preferences_and_network.py](Part1_Data_Generation/part1_preferences_and_network.py)**: A Python script using `preflibtools` and `networkx` to generate the initial conditions for the simulation. It generates voter preferences using Impartial Culture (IC) and Mallows models, and constructs voter social networks using Erdős-Rényi (ER) and Barabási-Albert (BA) graphs.
+* 📄 **[part1_preferences_and_network.py](Data_Generation/part1_preferences_and_network.py)**: A Python script using `preflibtools` and `networkx` to generate the initial conditions for the simulation. It generates voter preferences using Impartial Culture (IC) and Mallows models, and constructs voter social networks using Erdős-Rényi (ER) and Barabási-Albert (BA) graphs.
 
 ### Part 2: Agent-Based Simulation
 * 📄 **[election.gaml](Part2_Agent_Based_Simulation/election.gaml)**: The GAMA platform simulation code. It simulates a 60-day election cycle where agents react to daily polls based on their Nash equilibrium calculations. The model tracks social welfare, the variance of the candidate scores, and the number of strategic opinion changes per day.
