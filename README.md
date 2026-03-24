@@ -17,15 +17,15 @@ The repository is structured to reflect the four main phases of our methodology:
 * 📄 **[part1_preferences_and_network.py](Data_Generation/part1_preferences_and_network_py.py)**: A Python script using `preflibtools` and `networkx` to generate the initial conditions for the simulation. It generates voter preferences using Impartial Culture (IC) and Mallows models, and constructs voter social networks using Erdős-Rényi (ER) and Barabási-Albert (BA) graphs.
 
 ### Part 2: Agent-Based Simulation
-* 📄 **[election.gaml](Part2_Agent_Based_Simulation/election.gaml)**: The GAMA platform simulation code. It simulates a 60-day election cycle where agents react to daily polls based on their Nash equilibrium calculations. The model tracks social welfare, the variance of the candidate scores, and the number of strategic opinion changes per day.
+* 📄 **[election.gaml](Simulation/election.gaml)**: The GAMA platform simulation code. It simulates a 60-day election cycle where agents react to daily polls based on their Nash equilibrium calculations. The model tracks social welfare, the variance of the candidate scores, and the number of strategic opinion changes per day.
 
 ### Part 3: Deep Learning Surrogate Model
-* 📄 **[Part3.ipynb](Part3_Surrogate_Model/Part3.ipynb)**: A Jupyter Notebook containing the data preprocessing and the TensorFlow/Keras implementation of a Bidirectional Long Short-Term Memory (BiLSTM) neural network. It trains on the GAMA time-series data to rapidly predict daily vote changes.
+* 📄 **[Part3.ipynb](Surrogate_Model/Surrogate_model.ipynb)**: A Jupyter Notebook containing the data preprocessing and the TensorFlow/Keras implementation of a Bidirectional Long Short-Term Memory (BiLSTM) neural network. It trains on the GAMA time-series data to rapidly predict daily vote changes.
 * 📊 **[surrogate_training_data_FINAL.csv](Dataset/surrogate_training_data_FINAL.csv)**: The core dataset exported from GAMA used to train the surrogate model, stored in the `Dataset` folder.
 
 ### Part 4: Analysis & Reporting
-* 📄 **[plotforGamaResult.ipynb](Part4_Analysis_Report/plotforGamaResult.ipynb)**: A Jupyter Notebook used to plot and visualize the outputs of the GAMA simulations and compare them against the surrogate model's predictions.
-* 📕 **[Report.pdf](Part4_Analysis_Report/Report.pdf)**: The final academic paper formatted in the ACM double-column template, detailing the game theory formalization, simulation setup, surrogate model architecture, and discussions on scalability.
+* 📄 **[plotforGamaResult.ipynb](Analysis_and_Report/plotforGamaResult.ipynb)**: A Jupyter Notebook used to plot and visualize the outputs of the GAMA simulations and compare them against the surrogate model's predictions.
+* 📕 **[Report.pdf](Analysis_and_Report/Report.pdf)**: The final academic paper formatted in the ACM double-column template, detailing the game theory formalization, simulation setup, surrogate model architecture, and discussions on scalability.
 
 ---
 
